@@ -7,7 +7,7 @@ conn, addr = sock.accept()
 print('connected: ', addr)
 
 while True:
-    data = conn.recv(1060)
+    data = conn.recv(1024)
     if not data:
         break
     conn.send(data.upper())
